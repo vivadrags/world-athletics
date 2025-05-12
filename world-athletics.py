@@ -99,7 +99,6 @@ def create_database():
 
     # Create and use database
     create_db_query = "CREATE DATABASE IF NOT EXISTS world_athletics"
-    use_db_query = "USE world_athletics"
 
     # Create table
     create_table_query = """
@@ -121,7 +120,6 @@ def create_database():
             );
         """
     cursor.execute(create_db_query)
-    cursor.execute(use_db_query)
     cursor.execute(create_table_query)
     database.commit()
 
